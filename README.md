@@ -3,6 +3,9 @@
 - [React](https://reactjs.org/docs/hooks-intro.html)
 - [tailwindcss](https://tailwindcss.com/)
 
+# 项目地址
+- [zhongsudaer-front](https://github.com/yongan140621/zhongsudaer-front)
+
 # 安装依赖
 ```
 npm install
