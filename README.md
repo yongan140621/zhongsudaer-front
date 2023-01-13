@@ -1,3 +1,8 @@
+# 技术栈
+- [Next.js](https://nextjs.org/docs/getting-started)
+- [React](https://reactjs.org/docs/hooks-intro.html)
+- [tailwindcss](https://tailwindcss.com/)
+
 # 安装依赖
 ```
 npm install
