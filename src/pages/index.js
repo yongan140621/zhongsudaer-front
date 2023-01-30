@@ -51,41 +51,41 @@ function Footer() {
         id: 0,
         icon: '',
         title: '公司地址',
-        desc: '浙江省杭州市中石化'
+        desc: '浙江省杭州市上城区环丁东支路123号'
       },
       {
         id: 0,
         icon: '',
         title: '联系电话',
-        desc: ['13170937737', '13170937738', '13170937739']
+        desc: ['13306509022  洪先生(销售总监)']
       },
       {
         id: 0,
         icon: '',
         title: '公司传真',
-        desc: '0512-67530042'
+        desc: '0571-88023028'
       },
     ],
-    [
-      {
-        id: 0,
-        icon: '',
-        title: '公司地址',
-        desc: '浙江省杭州市中石化'
-      },
-      {
-        id: 0,
-        icon: '',
-        title: '联系电话',
-        desc: '13170937737'
-      },
-      {
-        id: 0,
-        icon: '',
-        title: '公司传真',
-        desc: '0512-67530042'
-      },
-    ],
+    // [
+    //   {
+    //     id: 0,
+    //     icon: '',
+    //     title: '公司地址',
+    //     desc: '浙江省杭州市上城区环丁东支路123号'
+    //   },
+    //   {
+    //     id: 0,
+    //     icon: '',
+    //     title: '联系电话',
+    //     desc: '13306509022  洪先生(销售总监)'
+    //   },
+    //   {
+    //     id: 0,
+    //     icon: '',
+    //     title: '公司传真',
+    //     desc: '0512-67530042'
+    //   },
+    // ],
   ]
 
   return (
@@ -135,8 +135,8 @@ export default function Home() {
       <Head>
         <title>中苏达尔阀门科技(杭州)有限公司</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="keywords" content="" />
-        <meta name="description" content="" />
+        <meta name="keywords" content="苏州阀门厂,中核苏阀,苏阀,苏州,中核,阀门,中苏达尔,中核苏州阀门"/>
+        <meta name="description" content="中核苏州阀门有限公司成立于1952年，是苏州市建国后组建的首家国营企业，现隶属于中国核工业集团公司，具有69年的发展历程，是国内生产和销售阀门的龙头企业，创建了国家知名品牌SUFA和H牌，为国防建设、苏州地方经济的发展、装备制造及关联产业发展做出了积极贡献，被誉为苏州地方工业的摇篮。"/>
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <Header />
