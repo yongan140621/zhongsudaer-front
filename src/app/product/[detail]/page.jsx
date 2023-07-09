@@ -1,13 +1,30 @@
+'use client'
+import { useMemo } from 'react'
 import { products } from '@/shared'
 import { useParams, useSearchParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
-import router from 'next/router'
 
 export default function ProductDetail() {
   const router = useRouter()
-  console.log(router)
-  const item = products[1]
+  const id = useParams().detail
+
+  const index = products.findIndex(item => item.id === id)
+
+  if (index === -1) {
+    return (
+      <div className='text-center py-40'>未找到该商品</div>
+    )
+  }
+
+  const item = products[index]
   const tags = ['专业', '品质', '保障']
+
+  let recommends = products.slice(index + 1)
+  if (recommends.length > 3) {
+    recommends = recommends.slice(index, index + 3)
+  } else if (recommends.length < 3) {
+    recommends.push(...(products.slice(0, 3 - recommends.length)))
+  }
 
   return (
     <div className='md:p-4 pc:w-[1200px] pc:mx-auto lg:py-12'>
@@ -37,6 +54,23 @@ export default function ProductDetail() {
         <div className='border-l border-r border-b p-4 text-sm text-[#666] xs:text-base xs:p-6'>
           {item.desc}
         </div>
+      </div>
+      <div className='px-4 md:mt-8 md:px-0'>
+        <div className='text-xl mb-4'>相关推荐</div>
+        <ul className='sm:flex sm:-mx-1'>
+          {recommends.slice(0, 3).map(item => {
+            return (
+              <li
+                key={item.id}
+                className="mb-4 group cursor-pointer sm:px-1"
+                onClick={() => router.push(`/product/${item.id}`)}
+              >
+                <img src={item.src} alt={item.name} />
+                <div className="leading-10 bg-[#f8f8f8] group-hover:bg-[#223987] group-hover:text-white px-4">{item.name}</div>
+              </li>
+            )
+          })}
+        </ul>
       </div>
     </div>
   )

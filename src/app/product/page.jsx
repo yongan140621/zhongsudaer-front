@@ -1,3 +1,4 @@
+'use client'
 import { products } from '@/shared'
 import { useRouter } from 'next/navigation'
 
@@ -12,7 +13,7 @@ export default function Product() {
             <li
               key={item.id}
               className="mb-4 group cursor-pointer last:mb-0 xs:basis-1/2 xs:px-2 md:basis-1/3 lg:basis-1/4 lg:mb-6"
-              onClick={() => router.push(`/product/detail?id=${item.id}`)}
+              onClick={() => router.push(`/product/${item.id}`)}
             >
               <img src={item.src} alt={item.name} />
               <div className='leading-[40px] bg-[#f8f8f8] px-4 group-hover:bg-[#223987] group-hover:text-white'>{item.name}</div>

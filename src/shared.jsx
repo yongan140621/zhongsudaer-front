@@ -25,7 +25,7 @@ export const canUseDom = typeof window !== 'undefined' && typeof document !== 'u
 
 export const products = [
   {
-    id: 0,
+    id: 'p001',
     name: '核电产品',
     src: '/product_0.jpeg',
     desc: (
@@ -44,7 +44,7 @@ export const products = [
     )
   },
   {
-    id: 1,
+    id: 'p002',
     name: '公司工程阀门',
     src: '/product_1.jpeg',
     desc: (
@@ -65,7 +65,7 @@ export const products = [
     )
   },
   {
-    id: 2,
+    id: 'p003',
     name: '球阀',
     src: '/product_2.jpeg',
     desc: (
@@ -88,7 +88,7 @@ export const products = [
     )
   },
   {
-    id: 3,
+    id: 'p004',
     name: '止回阀',
     src: '/product_3.jpeg',
     desc: (
@@ -111,7 +111,7 @@ export const products = [
     )
   },
   {
-    id: 4,
+    id: 'p005',
     name: '截止阀',
     src: '/product_4.jpeg',
     desc: (
@@ -134,7 +134,7 @@ export const products = [
     )
   },
   {
-    id: 5,
+    id: 'p006',
     name: '闸阀',
     src: '/product_5.jpeg',
     desc: (

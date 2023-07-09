@@ -29,7 +29,7 @@ export default function Header() {
           >
             <path fillRule="evenodd" clipRule="evenodd" d="M22 21L2 21L2 19L22 19V21ZM22 13L2 13L2 11L22 11V13ZM22 5L2 5L2 3L22 3L22 5Z" />
           </svg>
-          <img src="/logo.png" alt="" className="w-20 cursor-pointer" onClick={() => router.push('/')} />
+          <img src="/logo.png" alt="" className="w-20 cursor-pointer md:w-28" onClick={() => router.push('/')} />
         </div>
 
         <div className={`hidden text-sm sm:flex md:text-base`}>
