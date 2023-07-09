@@ -1,5 +1,9 @@
 export default function Honour() {
   return (
-    <div>荣誉资质</div>
+    <div
+      className="lg:mx-auto pc:w-[1280px]"
+    >
+      <img src="/honour.jpg" alt="" />
+    </div>
   )
 }

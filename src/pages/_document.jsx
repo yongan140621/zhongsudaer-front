@@ -1,15 +1,17 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import Script from 'next/script'
 
 export default function Document() {
   return (
     <Html lang="en">
       <Head />
+
       <body>
-        <Header />
+        {/* <Script
+          src="https://api.map.baidu.com/api?type=webgl&v=1.0&ak=WHRSRcIb1WGj7nP8eVyOvzYXkBzEb5jA"
+          strategy="beforeInteractive"
+        /> */}
         <Main />
-        <Footer />
         <NextScript />
       </body>
     </Html>
