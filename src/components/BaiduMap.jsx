@@ -7,9 +7,13 @@ export default function BaiduMap(props) {
     var map = new BMapGL.Map("container")
     map.disableDragging()
     var point = new BMapGL.Point(120.241695, 30.366236)
-    var markergg = new BMapGL.Marker(point);
+    var marker = new BMapGL.Marker(point);
+    var label = new BMapGL.Label('浙江省杭州市上城区环丁东支路123号', {
+      offset: new BMapGL.Size(15, -22)
+    })
     setCenter()
-    map.addOverlay(markergg);
+    marker.setLabel(label)
+    map.addOverlay(marker);
 
     function setCenter() {
       map.centerAndZoom(point, 15)

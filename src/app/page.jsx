@@ -16,7 +16,7 @@ export default function Home() {
         <ul className='px-2 mt-4 flex flex-wrap -mx-1 lg:-mx-3 pc:w-[1280px] pc:mx-auto'>
           {products.map(item => {
             return (
-              <li key={item.id} className='basis-1/2 mb-4 px-1 cursor-pointer sm:basis-1/3 lg:px-3 lg:mb-8' onClick={() => router.push(`/product/${item.id}`)}>
+              <li key={item.id} className='basis-1/2 mb-4 px-1 cursor-pointer sm:basis-1/3 lg:px-3 lg:mb-8' onClick={() => router.push(`/product/detail?id=${item.id}`)}>
                 <div className='group hover:shadow-xl'>
                   <div className="overflow-hidden">
                     <img src={item.src} alt={item.name} className='transition group-hover:scale-125' />

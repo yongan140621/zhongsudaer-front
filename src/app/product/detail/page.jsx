@@ -1,12 +1,13 @@
 'use client'
 import { useMemo } from 'react'
 import { products } from '@/shared'
-import { useParams, useSearchParams, useRouter } from 'next/navigation'
+import { useSearchParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 
 export default function ProductDetail() {
   const router = useRouter()
-  const id = useParams().detail
+  const searchParams = useSearchParams()
+  const id = searchParams.get('id')
 
   const index = products.findIndex(item => item.id === id)
 
@@ -63,7 +64,7 @@ export default function ProductDetail() {
               <li
                 key={item.id}
                 className="mb-4 group cursor-pointer sm:px-1"
-                onClick={() => router.push(`/product/${item.id}`)}
+                onClick={() => router.push(`/product/detail?id=${item.id}`)}
               >
                 <img src={item.src} alt={item.name} />
                 <div className="leading-10 bg-[#f8f8f8] group-hover:bg-[#223987] group-hover:text-white px-4">{item.name}</div>
