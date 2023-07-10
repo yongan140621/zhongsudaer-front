@@ -3,12 +3,14 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { navList } from '@/shared'
 import { Transition } from '@headlessui/react'
+import QrCode from './qrcode';
 import Mask from './mask'
 import { useRouter } from 'next/navigation'
 
 export default function Header() {
   const logoRate = 4255 / 867
   const [visible, setVisible] = useState(false)
+  const [showCode, setShowCode] = useState(false)
 
   const router = useRouter()
 
@@ -45,7 +47,35 @@ export default function Header() {
             )
           })}
         </div>
+
+        <QrCode className="w-5 h-5 sm:hidden" onClick={() => setShowCode(true)} />
       </div>
+
+      <div className='fixed right-0 bottom-10 bg-white p-2 shadow group hidden md:block'>
+        <QrCode className="w-10 h-10 group-hover:hidden group-focus:hidden" />
+        {/* <div className='w-40 h-40 bg-black hidden group-hover:block group-focus:block'></div> */}
+        <img className='w-40 h-40 bg-black hidden group-hover:block group-focus:block' src="/qrcode.jpeg" alt="" />
+      </div>
+
+
+      <Mask
+        visible={showCode}
+        onClose={() => setShowCode(false)}
+      />
+      <Transition
+        show={showCode}
+        className="fixed left-0 bottom-0 w-full transform-gpu"
+        enter="transition-all duration-300"
+        enterFrom="translate-y-full"
+        enterTo="translate-y-0"
+        leave='transition-all duration-300'
+        leaveFrom='translate-y-0'
+        leaveTo='translate-y-full'
+      >
+        <div className='rounded-t-2xl p-10 bg-white overflow-hidden'>
+          <img src="/qrcode.jpeg" className='w-full' alt="" />
+        </div>
+      </Transition>
 
       <Mask
         visible={visible}
