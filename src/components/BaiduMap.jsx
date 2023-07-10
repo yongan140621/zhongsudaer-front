@@ -32,7 +32,8 @@ function useBaiduMap(fn) {
     window.BMAP_PROTOCOL = "https";
     window.BMapGL_loadScriptTime = (new Date).getTime();
     var script = document.createElement('script')
-    script.src = 'https://api.map.baidu.com/getscript?type=webgl&v=1.0&ak=AVsOfgaGvKWB0MPKNtZW5qDIb2obON5k&services=&t=20230613170744'
+    // script.src = 'https://api.map.baidu.com/getscript?type=webgl&v=1.0&ak=AVsOfgaGvKWB0MPKNtZW5qDIb2obON5k&services=&t=20230613170744'
+    script.src = 'https://api.map.baidu.com/getscript?type=webgl&v=1.0&ak=WHRSRcIb1WGj7nP8eVyOvzYXkBzEb5jA&services=&t=20230613170744'
 
     let setCenter
 
