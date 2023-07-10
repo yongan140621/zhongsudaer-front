@@ -1,22 +1,24 @@
 "use client";
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import { navList } from 'utils/shared'
 import { Transition } from '@headlessui/react'
 import QrCode from './qrcode';
 import Mask from './mask'
-import { useRouter } from 'next/navigation'
+import { useRouter, usePathname } from 'next/navigation'
 
 export default function Header() {
   const logoRate = 4255 / 867
   const [visible, setVisible] = useState(false)
   const [showCode, setShowCode] = useState(false)
 
+  const pathname = usePathname()
   const router = useRouter()
 
-  useEffect(() => {
+  const isActiveMenu = useCallback((menuPath) => {
+    return menuPath.split('/').join('') === pathname.split('/').slice(0, 2).join('')
+  }, [pathname])
 
-  }, [])
 
   return (
     <div className="bg-white sticky top-0 z-10 shadow">
@@ -36,13 +38,15 @@ export default function Header() {
 
         <div className={`hidden text-sm sm:flex md:text-base`}>
           {navList.map((item, index) => {
+            const isActive = isActiveMenu(item.path)
+
             return (
               <Link
-                className={`${index !== navList.length - 1 ? 'mr-6 md:mr-10' : ''} group cursor-pointer hover:text-[#223987]`}
+                className={`${index !== navList.length - 1 ? 'mr-6 md:mr-10' : ''} group cursor-pointer hover:text-[#223987] ${isActive ? 'text-[#223987]' : ''}`}
                 key={item.path}
                 href={item.path}
               >
-                <div className={`border-b-2 border-transparent leading-[40px] md:leading-[78px] group-hover:border-[#223987] group-hover:font-medium`}>{item.name}</div>
+                <div className={`border-b-2 leading-[40px] md:leading-[78px] group-hover:border-[#223987] group-hover:font-medium ${isActive ? 'border-[#223987] font-medium' : 'border-transparent'}`}>{item.name}</div>
               </Link>
             )
           })}
@@ -56,7 +60,6 @@ export default function Header() {
         {/* <div className='w-40 h-40 bg-black hidden group-hover:block group-focus:block'></div> */}
         <img className='w-40 h-40 bg-black hidden group-hover:block group-focus:block' src="/qrcode.jpeg" alt="" />
       </div>
-
 
       <Mask
         visible={showCode}
@@ -83,7 +86,7 @@ export default function Header() {
       />
       <Transition
         show={visible}
-        className="fixed left-0 bottom-0 w-4/5 h-full bg-white transform-gpu"
+        className="fixed left-0 bottom-0 z-[10000] w-4/5 h-full bg-white transform-gpu"
         enter="transition-all duration-300"
         enterFrom="-translate-x-full"
         enterTo="translate-x-0"
@@ -103,16 +106,21 @@ export default function Header() {
 
         <ul className='px-4 py-8 w-full'>
           {navList.map(item => {
+            const isActive = isActiveMenu(item.path)
+
             return (
               <li
                 key={item.name}
-                className='border-b py-2 px-2 cursor-pointer rounded active:bg-sky-600 active:text-white active:border-transparent'
+                className={`border-b py-1 cursor-pointer last:border-none`}
                 onClick={() => {
                   setVisible(false)
                   router.push(item.path)
                 }}
               >
-                {item.name}
+                <div className={`py-2 px-2 rounded active:bg-sky-600 active:text-white ${isActive ? 'bg-sky-600 text-white' : ''}`}>
+                  {item.name}
+                </div>
+
               </li>
             )
           })}
