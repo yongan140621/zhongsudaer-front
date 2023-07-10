@@ -3,24 +3,24 @@ import { useEffect } from 'react'
 export default function BaiduMap(props) {
   const { className } = props
 
-  // useBaiduMap(() => {
-  //   var map = new BMapGL.Map("container")
-  //   map.disableDragging()
-  //   var point = new BMapGL.Point(120.241695, 30.366236)
-  //   var marker = new BMapGL.Marker(point);
-  //   var label = new BMapGL.Label('浙江省杭州市上城区环丁东支路123号', {
-  //     offset: new BMapGL.Size(15, -22)
-  //   })
-  //   setCenter()
-  //   marker.setLabel(label)
-  //   map.addOverlay(marker);
+  useBaiduMap(() => {
+    var map = new BMapGL.Map("container")
+    map.disableDragging()
+    var point = new BMapGL.Point(120.241695, 30.366236)
+    var marker = new BMapGL.Marker(point);
+    var label = new BMapGL.Label('浙江省杭州市上城区环丁东支路123号', {
+      offset: new BMapGL.Size(15, -22)
+    })
+    setCenter()
+    marker.setLabel(label)
+    map.addOverlay(marker);
 
-  //   function setCenter() {
-  //     map.centerAndZoom(point, 15)
-  //   }
+    function setCenter() {
+      map.centerAndZoom(point, 15)
+    }
 
-  //   return setCenter
-  // })
+    return setCenter
+  })
 
   return (
     <div id="container" className={className}></div>
