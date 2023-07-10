@@ -1,6 +1,6 @@
 'use client'
 import { useMemo } from 'react'
-import { products } from '@/shared'
+import { products } from 'utils/shared'
 import { useSearchParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 

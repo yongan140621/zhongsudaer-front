@@ -1,9 +1,9 @@
 'use client'
 import Head from 'next/head'
 import Image from 'next/image'
-import { products } from '@/shared'
+import { products } from 'utils/shared'
 import { useRouter } from 'next/navigation'
-import BaiduMap from '@/components/BaiduMap'
+import BaiduMap from 'components/BaiduMap'
 
 export default function Home() {
   const router = useRouter()

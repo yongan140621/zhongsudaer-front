@@ -1,9 +1,9 @@
 'use client'
 import { useState, useEffect, useRef } from 'react'
 import Script from 'next/script'
-import { canUseDom } from '@/shared'
+import { canUseDom } from 'utils/shared'
 import dynamic from 'next/dynamic'
-import BaiduMap from '@/components/BaiduMap'
+import BaiduMap from 'components/BaiduMap'
 
 export default function Contact() {
   return (

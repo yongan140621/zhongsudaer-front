@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { navList } from '@/shared'
+import { navList } from 'utils/shared'
 
 export default function Footer() {
   return (

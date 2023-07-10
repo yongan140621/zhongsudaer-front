@@ -1,5 +1,5 @@
 'use client'
-import { products } from '@/shared'
+import { products } from 'utils/shared'
 import { useRouter } from 'next/navigation'
 
 export default function Product() {

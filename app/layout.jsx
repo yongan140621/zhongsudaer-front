@@ -1,10 +1,10 @@
 'use client'
-import '@/styles/globals.css'
+import 'styles/globals.css'
 import Head from 'next/head'
-import Header from '@/components/header'
-import Footer from '@/components/footer'
+import Header from 'components/header'
+import Footer from 'components/footer'
 import Script from 'next/script'
-import { canUseDom } from '@/shared'
+import { canUseDom } from 'utils/shared'
 
 export default function RootLayout({
   children,

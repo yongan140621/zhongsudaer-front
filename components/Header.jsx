@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { navList } from '@/shared'
+import { navList } from 'utils/shared'
 import { Transition } from '@headlessui/react'
 import QrCode from './qrcode';
 import Mask from './mask'
