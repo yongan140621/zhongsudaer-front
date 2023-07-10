@@ -8,7 +8,7 @@ import BaiduMap from 'components/BaiduMap'
 export default function Home() {
   const router = useRouter()
   return (
-    <>
+    <div className="overflow-x-hidden">
       <img src="/banner.jpeg" className='mx-auto' alt="中核苏阀" />
       <div className='py-6'>
         <div className='text-2xl text-center md:text-3xl'>产品中心</div>
@@ -31,16 +31,16 @@ export default function Home() {
 
         <div className='pc:w-[1420px] pc:mx-auto pc:bg-[#f5f5f5] pc:py-10'>
           <div className='pc:w-[1280px] pc:mx-auto'>
-            <img src="/banner_2.png" alt="" />
+            <img src="/banner_6.png" alt="" />
           </div>
         </div>
 
         <div className='mt-4 sm:mt-8 md:px-2 lg:w-[1024px] lg:mx-auto lg:mt-12'>
-          <img src="/banner_3.png" alt="" />
+          <img src="/banner_7.png" alt="" />
         </div>
 
         <div className='pc:w-[1420px] pc:mx-auto'>
-          <img src="/banner_4.png" alt="" />
+          <img src="/banner_8.png" alt="" />
         </div>
 
         <div className="mt-8 px-2 py-4 bg-[#f5f5f5] pc:w-[1420px] pc:mx-auto">
@@ -56,12 +56,12 @@ export default function Home() {
               </div>
             </div>
             <div className='mt-4 md:flex-1 md:mt-0'>
-              <img className='' src="/company.jpeg" alt="" />
+              <img className='' src="/company_1.jpeg" alt="" />
             </div>
           </div>
         </div>
 
-        <div className="mt-8 w-full h-[444px] bg-[url(/banner_4.jpeg)] bg-[length:100%_100%] bg-no-repeat px-2 py-8 md:pt-20 pc:w-[1420px] pc:mx-auto">
+        <div className="mt-8 w-full h-[444px] bg-[url(/banner_9.jpeg)] bg-[length:100%_100%] bg-no-repeat px-2 py-8 md:pt-20 pc:w-[1420px] pc:mx-auto">
           <div className='sm:flex lg:w-[1024px] lg:mx-auto'>
             <div className='text-white text-sm mb-10 sm:flex-1 sm:mt-10'>
               <div className='text-lg mb-3 sm:text-2xl sm:mb-10 md:text-3xl'>联系我们</div>
@@ -73,6 +73,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }

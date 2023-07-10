@@ -3,7 +3,7 @@ export default function Honour() {
     <div
       className="lg:mx-auto pc:w-[1280px]"
     >
-      <img src="/honour.jpg" alt="" />
+      <img src="/honour0.jpg" alt="" />
     </div>
   )
 }
