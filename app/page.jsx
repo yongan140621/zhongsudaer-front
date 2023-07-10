@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { products } from 'utils/shared'
 import { useRouter } from 'next/navigation'
 import BaiduMap from 'components/BaiduMap'
+import PhoneText from 'components/PhoneText'
 
 export default function Home() {
   const router = useRouter()
@@ -66,8 +67,8 @@ export default function Home() {
             <div className='text-white text-sm mb-10 sm:flex-1 sm:mt-10'>
               <div className='text-lg mb-3 sm:text-2xl sm:mb-10 md:text-3xl'>联系我们</div>
               <div className='mb-2 sm:mb-6 md:text-base'>公司地址: &nbsp;&nbsp;浙江省杭州市上城区环丁东支路123号</div>
-              <div className='mb-1 md:text-base'>联系电话: &nbsp;&nbsp;18058741565 应女士</div>
-              <div className='md:text-base'><span className='invisible'>联系电话: </span>&nbsp;&nbsp;13656671076 吴女士</div>
+              <div className='mb-1 md:text-base'>联系电话: &nbsp;&nbsp;<PhoneText text="18058741565" /> 应女士</div>
+              <div className='md:text-base'><span className='invisible'>联系电话: </span>&nbsp;&nbsp;<PhoneText text="13656671076" /> 吴女士</div>
             </div>
             <BaiduMap className="h-56 sm:flex-1 sm:h-64" />
           </div>

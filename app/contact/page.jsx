@@ -4,6 +4,7 @@ import Script from 'next/script'
 import { canUseDom } from 'utils/shared'
 import dynamic from 'next/dynamic'
 import BaiduMap from 'components/BaiduMap'
+import PhoneText from 'components/PhoneText'
 
 export default function Contact() {
   return (
@@ -18,8 +19,8 @@ export default function Contact() {
           <div className='mt-4 sm:mt-0 lg:mt-20'>
             <div className='text-[#999]'>联系电话:</div>
             <div className='sm:flex sm:gap-x-5 lg:block lg:gap-0'>
-              <div>18058741565 应女士</div>
-              <div>13656671076 吴女士</div>
+              <div><PhoneText text="18058741565" /> 应女士</div>
+              <div><PhoneText text="13656671076" /> 吴女士</div>
             </div>
           </div>
         </div>
