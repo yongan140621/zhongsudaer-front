@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  distDir: 'dist',
   reactStrictMode: true,
-  trailingSlash: true,
+  trailingSlash: false,
   images: {
     domains: ['bms.zhongsudaer.com'],
     unoptimized: true
