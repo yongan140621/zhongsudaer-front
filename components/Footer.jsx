@@ -23,7 +23,9 @@ export default function Footer() {
           <div className='text-center'>Copyright © 中苏达尔阀门科技（杭州）有限公司</div>
           <div className='text-center mt-1 lg:mt-0 lg:ml-4'>地址：浙江省杭州市上城区环丁东支路123号</div>
         </div>
-        <div className='flex justify-center text-xs pt-1 pb-4'>备案号: 浙ICP备2021028231号-1</div>
+        <div className='flex justify-center text-xs pt-1 pb-4'>
+          <a href="https://beian.miit.gov.cn/" target="_blank">备案号: 浙ICP备2021028231号-1</a>
+        </div>
       </div>
     </div>
   )
