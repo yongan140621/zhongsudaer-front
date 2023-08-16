@@ -14,7 +14,7 @@ export default function RootLayout({
       <head>
         <title>中苏达尔阀门科技(杭州)有限公司</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="keywords" content="" />
+        <meta name="keywords" content="中核苏阀,苏阀达尔,苏阀,达尔阀门,工程阀门,截止阀,闸阀,止回阀" />
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
       </head>
